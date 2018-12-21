@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+	<div class="container mt-3">
+  		<h2>王思聪微博抽奖啦！</h2>
+  		<p>关于这件事你怎么看</p><br>
+  		<div class="media border p-3">
+    		<img src="https://www.w3schools.com/bootstrap4/img_avatar3.png" alt="John Doe" class="mr-3 mt-3 rounded-circle" style="width:60px;">
+    		<div class="media-body">
+      			<h4>John Doe <small><i>Posted on February 19, 2016</i></small></h4>
+      			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      			<div class="media p-3">
+        			<img src="https://www.w3schools.com/bootstrap4/img_avatar2.png" alt="Jane Doe" class="mr-3 mt-3 rounded-circle" style="width:45px;">
+        			<div class="media-body">
+          				<h4>Jane Doe <small><i>Posted on February 20 2016</i></small></h4>
+          				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        			</div>
+      			</div>  
+    		</div>
+		</div><br>
+		{{range .}}
+			<div class="media border p-3">
+				<img src="https://www.w3schools.com/bootstrap4/img_avatar3.png" alt="John Doe" class="mr-3 mt-3 rounded-circle" style="width:60px;">
+				<div class="media-body">
+					<h4>{{.Name}}</h4>
+					<p>{{.Content}}</p> 
+				</div>
+			</div><br>
+		{{end}}
+	</div><br><br>
+	<div class="container">
+		<h2>发布新回复</h2>
+		<form id="posts" method="POST">
+			<div class="form-group">
+				<label for="title">姓名</label>
+				<input type="text" class="form-control" id="title" name="userName">
+			</div>
+			<div class="form-group">
+					<label for="comment">内容</label>
+					<textarea class="form-control" rows="5" id="comment" name="userComment"></textarea>
+			</div>
+			<button id="sub" type="submit" class="btn btn-primary">Submit</button>
+		</form>
+	</div>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</html>

@@ -1,0 +1,20 @@
+.footer{
+	height:50px;
+	position:fixed;
+	bottom:0px;
+	left:570px;
+}
+
+.carousel-item{
+	width: 10%;
+	height: 10%;
+}
+
+.jumbotron.text-center{
+	background: #6495ED;
+}
+
+#myInput{
+	width: 1111px;
+	margin-left: 165px;
+}
